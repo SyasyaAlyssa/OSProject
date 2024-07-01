@@ -352,13 +352,34 @@ MiB Swap:      0.0 total,      0.0 free,      0.0 used.   5434.4 avail Mem
 @NanaAichata ➜ /workspaces/OSProject (main) $ uname -a
 Linux codespaces-972834 6.5.0-1021-azure #22~22.04.1-Ubuntu SMP Tue Apr 30 16:08:18 UTC 2024 x86_64 x86_64 x86_64 GNU/Linux
 ```
-11. What is the available free memory in the system. ***(1 mark)*** 5.3Gi
-12. What is the available disk space mounted on /workspace. ***(1 mark)*** 20771760
-13. Name the version and hardware architecture of the linux Virtual environment. ***(1 mark)*** The version is 6.5.0-1021-azure and the hardware architecture is x86_64
-14. What is the difference between **ls** vs **ls -asl**. ***(1 mark)*** 'ls' lists the contents of a directory, showing the names of files and directories while 'ls -asl' provides a more detailed view of all files, including hidden ones, along with their sizes and additional metadata.
-15. What is the TLB size of the Virtual CPU. ***(1 mark)*** 2560 4K pages
-16. What is the CPU speed of the Virtual CPU. ***(1 mark)*** 2777.642
-17. What is the top running process that consumes the most CPU cycles. ***(1 mark)*** 1.3%
+11. What is the available free memory in the system. ***(1 mark)***
+```bash
+5.3Gi
+```
+13. What is the available disk space mounted on /workspace. ***(1 mark)***
+```bash
+20771760
+```
+15. Name the version and hardware architecture of the linux Virtual environment. ***(1 mark)***
+```bash
+The version is 6.5.0-1021-azure and the hardware architecture is x86_64
+```
+17. What is the difference between **ls** vs **ls -asl**. ***(1 mark)***
+```bash
+'ls' lists the contents of a directory, showing the names of files and directories while 'ls -asl' provides a more detailed view of all files, including hidden ones, along with their sizes and additional metadata.
+```
+19. What is the TLB size of the Virtual CPU. ***(1 mark)***
+```bash
+2560 4K pages
+```
+21. What is the CPU speed of the Virtual CPU. ***(1 mark)***
+```bash
+2777.642
+```
+23. What is the top running process that consumes the most CPU cycles. ***(1 mark)***
+```bash
+1.3%
+```
 
 ## Running your own container instance.
 
@@ -418,8 +439,14 @@ f65be1987f84   debian    "bash"    19 minutes ago   Exited (137) 18 seconds ago 
 
 ***Questions:***
 
-1. Are files in the container persistent. Why not?. ***(1 mark)*** No it's not persistent because when a container stops or is deleted, all data created inside the container is lost. 
-2. Can we run two, or three instances of debian linux? . ***(1 mark)*** Yes, we can run multiple instances of Debian Linux using virtual machines or containers.
+1. Are files in the container persistent. Why not?. ***(1 mark)***
+```bash
+No it's not persistent because when a container stops or is deleted, all data created inside the container is lost.
+```
+3. Can we run two, or three instances of debian linux? . ***(1 mark)***
+```bash
+Yes, we can run multiple instances of Debian Linux using virtual machines or containers.
+```
 
 ## Running your own container with persistent storage
 
@@ -438,8 +465,11 @@ At the terminal, create a new directory called **myroot**, and run a instance of
 
 ***Questions:***
 
-1. Check the permission of the files created in myroot, what user and group is the files created in docker container on the host virtual machine? . ***(2 mark)*** The user is root and the group is root
-2. Can you change the permission of the files to user codespace.  You will need this to be able to commit and get points for this question. ***(2 mark)***
+1. Check the permission of the files created in myroot, what user and group is the files created in docker container on the host virtual machine? . ***(2 mark)***
+```bash
+The user is root and the group is root.
+```
+3. Can you change the permission of the files to user codespace.  You will need this to be able to commit and get points for this question. ***(2 mark)***
 ```bash
 //use sudo and chown
 sudo chown -R codespace:codespace myroot
@@ -484,8 +514,14 @@ drwxrwxrwx+ 2 codespace codespace 4096 Jun 26 12:12 /workspaces/OSProject/webpag
 ```
 The permission is read, write and execute for the owner, the group and others. The user and group who owns the folder is codespace
 
-2. What port is the apache web server running.***(1 mark)*** port 80
-3. What port is open for http protocol on the host machine? ***(1 mark)*** port 8080
+2. What port is the apache web server running.***(1 mark)***
+```bash
+port 80
+```
+4. What port is open for http protocol on the host machine? ***(1 mark)***
+```bash
+port 8080
+```
 
 ## Create SUB Networks
 
